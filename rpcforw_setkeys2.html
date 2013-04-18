@@ -1,0 +1,38 @@
+{% load i18n %}
+
+<div style='margin:0;background-color:#ffffe0;padding:25'>
+
+<h2>{% trans "GPS Event data IDs (keys)" %}</h2>
+
+    <div style='padding:4;margin-left:15'>
+    {% blocktrans %}
+        Each event, forwarded on a call to the pushevent method is composed by keys (IDs) that contain its information.
+        For example, the <b>device_id</b> key contains the device's ID, the <b>lat</b> key contains the GPS Latitude, etc.<br><br>
+
+        Not all keys will be available on a single event. The keys shown in an event depend on the type of event and its
+        definition on the script or the managed configuration.
+
+        Below is a complete and up to date list of all the available keys available:<br><br>
+    {% endblocktrans %}
+        <br><br>
+        <table>
+            {% for one in setkeys %}
+
+
+                {% if one.2 %}
+                    <tr>
+                    <td style="width: 20%" valign="top"><b>- {{ one.0 }}</b></td><td>: <i>({{ one.2 }})</i> {{ one.1 }} </td>
+                    </tr>
+                {% else %}
+                    <tr><td></td></tr>
+                    <tr>
+                    <td style="width: 20%; color:red" colspan=2><b><u>{{ one.0 }}:</u></b></td> <td>{{ one.1 }}</td>
+                    </tr>
+                    <tr><td></td></tr>
+                {% endif %}
+
+
+            {% endfor %}
+        </table>
+    </div>
+</div>
