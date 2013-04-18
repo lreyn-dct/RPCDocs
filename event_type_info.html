@@ -1,0 +1,29 @@
+{% load i18n %}
+
+{% blocktrans %}
+
+Event classification type<br>
+		<dl>
+			<li>0: unknown</li>
+			<li>1 - 99: GPS Event</li>
+				<ul>
+					<li>10: EV TAIP &nbsp;&nbsp;regular events</li>
+					<li>11: PV TAIP &nbsp;&nbsp;position & velocity</li>
+					<li>12: RXAIT &nbsp;&nbsp;&nbsp;&nbsp;driving metrics</li>
+					<li>20: empty GPS Event (gps time = 0)</li>
+				</ul>
+			<li>100-199: Connection Event</li>
+				<ul>
+					<li>100: Keep-alive</li>
+					<li>110: XART TAIP</li>
+					<li>111: XARS SIM Card Operator Info</li>
+					<li>150: Message</li>
+				</ul>
+			<li>300: Others</li>
+				<ul>
+					<li>301: Duplicate GPS Event</li>
+				</ul>
+		</dl>
+		<br>
+
+{% endblocktrans %}
