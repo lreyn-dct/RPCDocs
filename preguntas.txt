@@ -1,13 +1,33 @@
-Begin listening to 7002
-etc: +ACK:GTBSI,02010A,867844000798929,,001A,20130422154735,2908
-etc: +ACK:GTQSS,02010A,867844000798929,,001C,20130422154736,290A
-etc: +ACK:GTTMA,02010A,867844000798929,,0020,20130422154740,290E
-etc: +ACK:GTGEO,02010A,867844000798929,,4,0026,20130422154745,2914
-etc: +ACK:GTSPD,02010A,867844000798929,,0027,20130422154746,2915
-etc: +ACK:GTPIN,02010A,867844000798929,,0028,20130422154747,2916
-etc: +ACK:GTDOG,02010A,867844000798929,,0029,20130422154748,2917
-etc: +ACK:GTNMD,02010A,867844000798929,,002A,20130422154749,2918
-etc: +ACK:GTFKS,02010A,867844000798929,,002B,20130422154750,2919
-etc: +ACK:GTWLT,02010A,867844000798929,,002C,20130422154751,291A
-etc: +ACK:GTGLM,02010A,867844000798929,,002D,20130422154752,291B
-etc: +ACK:GTNTS,02010A,867844000798929,,002E,20130422154753,291D
+preguntas:
+
+En quentin veo que muestra:
+GPS:  
+- lat	: (number) Latitud GPS [x100000]
+- lon	: (number) Longitud GPS [x100000]
+- mph	: (number) Velocidad del vehículo.
+- hdop	: (number) Dilución de la precisión horizontal del GPS [x100]
+- vdop	: (number) Dilución de la precisión vertical del GPS
+- pdop	: (number) Dilución de la precisión del GPS [x100]
+
+Pero en Pegasus 1 veo lo siguiente:
+GPS:  
+- f_lat	: (number) Latitud GPS [x100000]
+
+
+- f_lon	: (number) Longitud GPS [x100000]
+
+
+- speed	: (number) Velocidad del vehículo.
+
+
+- f_hdop	: (number) Dilución de la precisión horizontal del GPS [x100]
+
+
+- f_vdop	: (number) Dilución de la precisión vertical del GPS
+
+
+- f_pdop	: (number) Dilución de la precisión del GPS [x100]
+
+
+
+Cual manera es correcta?
